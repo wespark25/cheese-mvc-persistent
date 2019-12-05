@@ -7,14 +7,13 @@
     <h1 th:text="${title}">Default Title</h1>
     <nav th:replace="fragments :: navigation"></nav>
 
-    <form method="post" style="max-width:600px;" th:object="${category}">
+    <form method="post" class="form-group" style="max-width:600px;" th:object="${menu}">
         <div class="form-group">
-            <label th:for="name">Name</label>
+            <label th:for="name">Add Menu</label>
             <input class="form-control" th:field="*{name}"/>
             <span th:errors="*{name}" class="error"></span>
         </div>
-
-        <input type="submit" value="Add Category" />
+        <input type="submit"/>
     </form>
 
 </body>
